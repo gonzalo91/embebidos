@@ -61,7 +61,7 @@
             </ul>
             <ul class="right-bar-side">
                 <li> <a href="#"><i class="fa fa-comment"></i> Contactanos </a></li>
-                <li> <a href="#"><i class="fa fa-phone"></i> + 8110983453 </a></li>
+                <li> <a href="#"><i class="fa fa-phone"></i> + 8112606435 </a></li>
                 <li> <a href="#"><i class="fa fa-envelope"></i> soporte@loza.com </a></li>
             </ul>
         </div>
