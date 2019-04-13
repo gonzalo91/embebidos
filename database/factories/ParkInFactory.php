@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 use Illuminate\Support\Facades\DB;
 
 $factory->define(App\Park_In::class, function (Faker $faker) {
-    $dateInitial = $faker->dateTimeBetween($startDate = '-1 Year', $endDate = 'now', $timezone='UTC');
+    $dateInitial = $faker->dateTimeBetween($startDate = '-1 MONTH', $endDate = 'now', $timezone='UTC');
 
     return [
         'park_id' => 1,

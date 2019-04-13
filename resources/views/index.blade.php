@@ -136,15 +136,15 @@
                         </div>
                     </div>
                 </li>
-                <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: block; z-index: 2; opacity: 1;" class="flex-active-slide">
-                    <img src="img/slide-1.jpg" alt="" draggable="false">
-                    <div class="container">
-                        <div class="align-c text-slider">
-                            <h3>Ahorra dinero con nuestra suscripcion <i class="fab fa-app-store-ios"></i></h3>
-                            <p>Haz un solo pago mensual y consigue acceso ilimitado*</p>
-                        </div>
-                    </div>
-                </li>
+{{--                <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: block; z-index: 2; opacity: 1;" class="flex-active-slide">--}}
+{{--                    <img src="img/slide-1.jpg" alt="" draggable="false">--}}
+{{--                    <div class="container">--}}
+{{--                        <div class="align-c text-slider">--}}
+{{--                            <h3>Ahorra dinero con nuestra suscripcion <i class="fab fa-app-store-ios"></i></h3>--}}
+{{--                            <p>Haz un solo pago mensual y consigue acceso ilimitado*</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
             </ul>
             <ul class="flex-direction-nav">
                 <li><a class="flex-prev" href="#">Previous</a></li>
@@ -767,20 +767,20 @@
                 backgroundColor: 'red',
                 borderColor: 'red',
                 data: [
-                    4,
-                    7,
-                    5,
-                    9,
+                    1,
                     3,
+                    1,
+                    2,
+                    3,
+                    5,
+                    4,
+                    6,
+                    3,
+                    5,
                     2,
                     1,
                     4,
-                    7,
-                    5,
-                    9,
-                    3,
-                    2,
-                    7
+                    5
                 ],
                 fill: false,
             }, ]
@@ -834,7 +834,7 @@
             labels: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
             datasets: [{
                 label: 'Estadisticas',
-                data: [7,6,5,4,3,2,1,1],
+                data: [{{ $dataFirstChart }}],
                 backgroundColor: [
                     '#FF841E',
                     '#FDEB38',
