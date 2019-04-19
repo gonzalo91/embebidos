@@ -16,10 +16,10 @@ class Controller extends BaseController
 
 
     public function index(){
-        $firstChart;
 
-        $sql = 'SELECT cast( sum(cuenta)/4 as UNSIGNED) cuenta FROM (SELECT count(DAYOFWEEK(cast(started_at as DATE))) cuenta, (DAYOFWEEK(cast(started_at as DATE))-1) as day FROM `parks_in` WHERE 1 GROUP BY DAYOFWEEK(cast(started_at as DATE)), cast(started_at as DATE)) as t GROUP BY day
-';
+
+//        $sql = 'SELECT cast( sum(cuenta)/4 as UNSIGNED) cuenta FROM (SELECT count(DAYOFWEEK(cast(started_at as DATE))) cuenta, (DAYOFWEEK(cast(started_at as DATE))-1) as day FROM `parks_in` WHERE 1 GROUP BY DAYOFWEEK(cast(started_at as DATE)), cast(started_at as DATE)) as t GROUP BY day
+//';
 
         $firstChart = DB::select($sql);
         $dataFirstChart = '';
@@ -43,9 +43,9 @@ class Controller extends BaseController
 //        }
 //    $dataFirstChart = collect($firstChart)->keyBy('cuenta')->keys()->implode(',');
 
-        foreach($firstChart as $data)
-            $dataFirstChart .= $data->cuenta.',';
-//        dd($dataFirstChart);
+//        foreach($firstChart as $data)
+//            $dataFirstChart .= $data->cuenta.',';
+////        dd($dataFirstChart);
         return view('index', compact('dataFirstChart'));
     }
 }

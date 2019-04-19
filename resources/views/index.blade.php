@@ -834,7 +834,7 @@
             labels: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
             datasets: [{
                 label: 'Estadisticas',
-                data: [{{ $dataFirstChart }}],
+                data: [30,27,42,44,31,24,27],
                 backgroundColor: [
                     '#FF841E',
                     '#FDEB38',
