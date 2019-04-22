@@ -18,10 +18,11 @@ class Controller extends BaseController
     public function index(){
 
 
-//        $sql = 'SELECT cast( sum(cuenta)/4 as UNSIGNED) cuenta FROM (SELECT count(DAYOFWEEK(cast(started_at as DATE))) cuenta, (DAYOFWEEK(cast(started_at as DATE))-1) as day FROM `parks_in` WHERE 1 GROUP BY DAYOFWEEK(cast(started_at as DATE)), cast(started_at as DATE)) as t GROUP BY day
-//';
+       $sql = 'SELECT *, IF (totalDeDias > 0, ROUND(totalPorDia / totalDeDias), 0) total FROM ( SELECT DAYOFWEEK(started_at) AS dia, COUNT(1) totalPorDia FROM parks_in AS perDay GROUP BY DAYOFWEEK(started_at) ) totalEntradas INNER JOIN ( SELECT COUNT(1) totalDeDias, t.dia FROM ( SELECT DAYOFWEEK(started_at) AS dia FROM parks_in GROUP BY DAYOFWEEK(started_at), DAY(started_at), MONTH(started_at) ) AS t GROUP BY t.dia ) AS totalDias ON totalEntradas.dia = totalDias.dia';
 
         $firstChart = DB::select($sql);
+
+        dd($firstChart);
         $dataFirstChart = '';
 
 //        dd(collect($firstChart)->keyBy('cuenta'));
