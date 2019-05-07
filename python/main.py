@@ -1,4 +1,4 @@
-from app.parking import Parking
+from app.parkingWithoutSlots import Parking
 
 park = Parking()
 
